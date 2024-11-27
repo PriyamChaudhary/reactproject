@@ -1,0 +1,142 @@
+.services-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-hero {
+  background-image: url('https://c8.alamy.com/comp/FBHTHE/construction-industry-themed-photo-collage-with-stacked-pictures-over-FBHTHE.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #130101; /* Change text color to white for better contrast */
+}
+
+.services-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+}
+
+.services-subtitle {
+  font-size: 30px;
+  color: rgba(11, 1, 1, 0.949); /* Slightly transparent white */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-list {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.services-list .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgb(251, 191, 36);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(251, 191, 36);
+}
+
+.service-icon {
+  font-size: 52px;
+  color: rgb(251, 191, 36);
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-details {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.service-details li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.service-details li::before {
+  content: '•';
+  color: #fbbf24;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.cta-section {
+  background-color: #fbbf24;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.cta-section h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #060000;
+  color: #faf7f7;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #0b0000;
+  transform: translateY(-2px);
+}
+
+.cta-button .icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .services-list .container {
+    grid-template-columns: 1fr;
+  }
+}

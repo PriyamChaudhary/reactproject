@@ -1,0 +1,91 @@
+/* src/pages/Contact.css */
+.contact {
+  background: url('../../public/images/contact-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.contact-form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #333;
+  color: #fff;
+}
+
+.submit-btn {
+  background-color: #ff6b35;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #e65a1e;
+}
