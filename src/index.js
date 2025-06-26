@@ -1,12 +1,8 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Using createRoot correctly
+import { createRoot } from 'react-dom/client';
 import { ClerkProvider } from '@clerk/clerk-react';
 import App from './App';
-<<<<<<< HEAD
 import './index.css';
-=======
-import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> d3bff5a (Enhance UI)
 
 // Replace with your Clerk publishable key
 const clerkPublishableKey = 'pk_test_ZmxlZXQtaG91bmQtMjguY2xlcmsuYWNjb3VudHMuZGV2JA';
