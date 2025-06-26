@@ -1,17 +1,20 @@
 import React from 'react';
 import { Home, Building, PenToolIcon as Tool, Paintbrush, ClipboardList, TreesIcon as Tree, Phone } from 'lucide-react';
-import './Services.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ServiceCard = ({ icon: Icon, title, description, details }) => (
-  <div className="service-card">
-    <Icon className="service-icon" />
-    <h3 className="service-title">{title}</h3>
-    <p className="service-description">{description}</p>
-    <ul className="service-details">
-      {details.map((detail, index) => (
-        <li key={index}>{detail}</li>
-      ))}
-    </ul>
+  <div className="card h-100 shadow-sm text-center">
+    <div className="card-body">
+      <div className="mb-3" style={{ fontSize: '2rem' }}><Icon /></div>
+      <h3 className="card-title mb-2">{title}</h3>
+      <p className="card-text mb-3">{description}</p>
+      <ul className="list-unstyled mb-3">
+        {details.map((detail, index) => (
+          <li key={index}>{detail}</li>
+        ))}
+      </ul>
+      <button className="btn btn-outline-primary">Learn More</button>
+    </div>
   </div>
 );
 
@@ -87,33 +90,36 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <section className="services-hero">
+      <section className="py-5 bg-light text-center mb-5">
         <div className="container">
-          <h1 className="services-title">Our Premium Services</h1>
-          <p className="services-subtitle">Explore the top-notch services we provide to bring your vision to life.</p>
+          <h1 className="display-4 fw-bold mb-3">Our Premium Services</h1>
+          <p className="lead mb-0">Explore the top-notch services we provide to bring your vision to life.</p>
         </div>
       </section>
 
-      <section className="services-list">
+      <section className="mb-5">
         <div className="container">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              details={service.details}
-            />
-          ))}
+          <div className="row g-4">
+            {services.map((service, index) => (
+              <div className="col-md-4 d-flex" key={index}>
+                <ServiceCard
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  details={service.details}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="cta-section">
+      <section className="py-5 bg-primary text-white text-center">
         <div className="container">
-          <h2>Ready to Start Your Project?</h2>
-          <p>Our team of experts is here to help you bring your vision to life.</p>
-          <a href="/contact" className="cta-button">
-            <Phone className="icon" />
+          <h2 className="mb-3">Ready to Start Your Project?</h2>
+          <p className="mb-4">Our team of experts is here to help you bring your vision to life.</p>
+          <a href="/contact" className="btn btn-light btn-lg">
+            <Phone className="me-2" />
             Contact Us Today
           </a>
         </div>

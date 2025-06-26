@@ -1,7 +1,7 @@
 // src/pages/Projects.js
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import './Projects.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Projects = () => {
   const projects = [
@@ -23,16 +23,17 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects">
-      <h2>Our Projects</h2>
-      <div className="project-list">
+    <div className="container py-5">
+      <h2 className="mb-4 text-center">Our Projects</h2>
+      <div className="row g-4">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            name={project.name}
-            description={project.description}
-            image={project.image}
-          />
+          <div className="col-md-4 d-flex" key={index}>
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              image={project.image}
+            />
+          </div>
         ))}
       </div>
     </div>
